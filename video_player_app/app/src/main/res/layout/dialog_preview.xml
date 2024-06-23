@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_gradient"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/preview_banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="Preview Banner"
+            android:src="@drawable/banner"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/preview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Title"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/preview_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Genre"
+            android:textColor="@android:color/black" />
+
+        <!-- Scrollable TextView for Lyrics -->
+        <ScrollView
+            android:id="@+id/scrollview_lyrics"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="4dp">
+            <TextView
+                android:id="@+id/preview_lyrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lyrics"
+                android:textColor="@android:color/black"
+                android:padding="4dp"
+                android:scrollbars="vertical"
+                android:gravity="top"
+                android:maxLines="6"
+                android:overScrollMode="always"
+                android:inputType="textMultiLine" />
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
